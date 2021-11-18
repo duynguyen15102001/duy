@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .slider-content{
+             width: 100%;
+             height: 1080px;
+             background-color: #2d3436;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         .slider-view{
+             width: 900px;
+             height: 450px;
+             background-color: #fff;
+             position: absolute; 
+             overflow: hidden;
+         }
+         .slider{
+             width: 300%;
+             height: 100%;
+             position: absolute;
+             display: flex;
+             background-color: #ff7675;
+             margin-top: -18px;
+         }
+         .slide{
+             width: calc(100%/3);
+         }
+         .s1{
+             background-color: #ffeaa7;
+         }
+         .s2{
+              background-color: #fab1a0;
+         }
+         .s3{
+               background-color: #ff7675;
+         }
+         .slide-btns{
+             width: 150px;
+             height: 50px;
+             position: absolute;
+             top: 95%;
+             left: 50%;
+             transform: translate(-50%,-50%);
+             display: flex;
+             justify-content: space-evenly;
+             background-color: red;
+         }
+         .slide-btn{
+             width: 40px;
+             height: 40%;
+             border: solid 2px #fff;
+
+         }
+         .slide-btn:hover{
+             background-color:blue;
+             cursor: pointer;
+             transition: 0.5s;
+         }
+         #b1:checked ~ .slider{
+              margin: 0;
+         }
+         #b2:checked ~ .slider{
+              margin-left: -100%;
+         }
+         #b3:checked ~ .slider{
+              margin-left: -200%;
+         }
+         .btn{
+             position: absolute;
+            z-index: 1;
+         }
+    </style>
+</head>
+<body>
+    <div class="slider-content">
+        <div class="slider-view">
+            <input type="radio" id="b1" class="btn" name="btn">
+            <input type="radio" id="b2" class="btn" name="btn">
+            <input type="radio" id="b3" class="btn" name="btn">
+            <div class="slider">
+                <div class="slide s1"></div>
+                <div class="slide s2"></div>
+                <div class="slide s3"></div>
+                
+            </div>
+            <div class="slide-btns">
+               <lable for="b1" class="slide-btn"></lable>
+               <lable for="b2" class="slide-btn"></lable>
+               <lable for="b3" class="slide-btn"></lable>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
